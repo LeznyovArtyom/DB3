@@ -39,7 +39,7 @@ int main(int numberOfArguments, char *arguments[])
     if (sqlca.sqlcode < 0) {
         printf("Ошибка при установке схемы: %s\n", sqlca.sqlerrm.sqlerrmc);
         EXEC SQL DISCONNECT students;
-        exit(1)
+        exit(1);
     }
 
     // Начинает работу с базой данных
@@ -92,7 +92,7 @@ int main(int numberOfArguments, char *arguments[])
     EXEC SQL DISCONNECT students;
 
     if (sqlca.sqlcode == 0) {
-        printf("Отключение от программы 2");
+        printf("Отключение от программы 2\n");
     }
 
     return EXIT_SUCCESS;

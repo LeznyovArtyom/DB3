@@ -57,7 +57,7 @@ int main(int numberOfArguments, char *arguments[])
     EXEC SQL BEGIN WORK;
 
     printf("Задание 4: \nВыбрать поставщиков, не поставивших ни одной из деталей, имеющих наименьший вес.\n");
-    
+
     // Подготовка запроса и привязка его к курсору cursor4
     EXEC SQL Declare cursor4 cursor for
              select s.n_post
@@ -68,7 +68,7 @@ int main(int numberOfArguments, char *arguments[])
              from spj
              join p on spj.n_det = p.n_det
              where p.ves=(select min(p.ves)
-                          from p)
+                          from p);
 
 
     // Открытие курсора к началу выполнения
@@ -106,7 +106,7 @@ int main(int numberOfArguments, char *arguments[])
         }
     }
 
-    // Заркытие курсора и завершение обработки результатов запроса
+    // Закрытие курсора и завершение обработки результатов запроса
     EXEC SQL CLOSE cursor4;
 
     // Фиксирование всех изменений в базе данных

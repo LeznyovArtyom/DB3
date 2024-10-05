@@ -59,7 +59,7 @@ int main(int numberOfArguments, char *arguments[])
     EXEC SQL BEGIN WORK;
 
     printf("Задание 3: \nНайти изделия, для которых выполнены поставки, вес которых более чем в 4 раза превышает минимальный вес поставки для изделия. Вывести номер изделия, вес поставки, минимальный вес поставки для изделия.\n");
-    
+
     // Подготовка запроса и привязка его к курсору cursor3
     EXEC SQL Declare cursor3 cursor for
              select spj.n_izd, spj.kol*p.ves pves, b.mves
@@ -109,7 +109,7 @@ int main(int numberOfArguments, char *arguments[])
         }
     }
 
-    // Заркытие курсора и завершение обработки результатов запроса
+    // Закрытие курсора и завершение обработки результатов запроса
     EXEC SQL CLOSE cursor3;
 
     // Фиксирование всех изменений в базе данных
