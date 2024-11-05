@@ -78,7 +78,7 @@ int main(int numberOfArguments, char *arguments[])
         // rollback сбрасывает search_path
         EXEC SQL SET SEARCH_PATH TO pmib1812;
 
-        return EXIT_FAILURE
+        return EXIT_FAILURE;
     }
 
     if (sqlca.sqlcode < 0) {
