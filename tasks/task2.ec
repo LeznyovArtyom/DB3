@@ -81,7 +81,7 @@ int main(int numberOfArguments, char *arguments[])
         return EXIT_FAILURE;
     }
 
-    if (sqlca.sqlcode < 0) {
+    if (sqlca.sqlcode == 0) {
         printf("Количество обработанных записей: %d\n", sqlca.sqlerrd[2]);
     }
 
