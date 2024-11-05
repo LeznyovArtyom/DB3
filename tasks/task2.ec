@@ -72,7 +72,7 @@ int main(int numberOfArguments, char *arguments[])
                        limit 1);
 
     if (sqlca.sqlcode < 0) {
-        printf("\nОшибка при изменении данных (UPDATE).\nКод: %d\nОписание: %s\n", desc, sqlca.sqlcode, sqlca.sqlerrm.sqlerrmc);
+        printf("\nОшибка при изменении данных (UPDATE).\nКод: %d\nОписание: %s\n", sqlca.sqlcode, sqlca.sqlerrm.sqlerrmc);
         // откат транзакции
         EXEC SQL ROLLBACK WORK;
         // rollback сбрасывает search_path
