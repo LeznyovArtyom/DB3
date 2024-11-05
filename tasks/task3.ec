@@ -105,7 +105,7 @@ int main(int numberOfArguments, char *arguments[])
         }
 
         if (sqlca.sqlcode == 0) {
-            printf("%s\t\t%d\t\t%d\n\n", n_izd, pves, mves);
+            printf("%s\t\t%d\t\t%d\n", n_izd, pves, mves);
         }
     }
 
