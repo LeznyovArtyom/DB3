@@ -82,7 +82,7 @@ int main(int numberOfArguments, char *arguments[])
     }
 
     if (sqlca.sqlcode < 0) {
-        print("Количество обработанных записей: %d\n", sqlca.sqlerrd[2]);
+        printf("Количество обработанных записей: %d\n", sqlca.sqlerrd[2]);
     }
 
     // Фиксирование всех изменений в базе данных
